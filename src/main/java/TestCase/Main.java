@@ -17,15 +17,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-////подключаем проперти файл
-//        Properties configTest = WorkWithPropertyFile.createProperti(args[0]);
-//        String pathBrowser = configTest.getProperty("pathBrowser");
-
-
-        String pathBrowser = args[0];
-
-        System.setProperty("webdriver.chrome.driver", pathBrowser);
+        System.setProperty("webdriver.chrome.driver", "/Users/dima/1/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", "c:\\TestMuseum\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+
         LogIn.logIn(driver);
         AktPrijoma.createAktPrijoma(driver);
         KnigaPostupleniya.createKnigaPostupleniya(driver);

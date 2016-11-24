@@ -18,7 +18,8 @@ public class WorkWithScreenshots {
     }
 
     public static String getPathScreenShot(File screenShot){
-        String result="./" + screenShot.getName();
+        String result="/home/dmitriy/JD/ScSh/" + screenShot.getName();
+//        String result="c:\\TestMuseum\\" + screenShot.getName();
         return result;
     }
 

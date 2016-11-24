@@ -13,20 +13,16 @@ import java.util.Properties;
 public class WorkWithPropertyFile {
 
 
-    public static Properties createProperti(){
-        FileInputStream fis =new ;
-        Properties properties=new Properties();
-        try {
-            fis=new FileInputStream("./test.properties");
+    public static Properties createProperti()  {
+        FileInputStream fis = null;
+        Properties properties = new Properties();
 
+        try {
+//            fis = new FileInputStream("c:\\TestMuseum\\config.properties");
+                            fis=new FileInputStream("/Users/dima/Desktop/Мои Доки/JAVA/testMuseum/src/main/resources/config.properties");
 
         } catch (FileNotFoundException e) {
-            try {
-                fis=new FileInputStream("/Users/dima/Desktop/Мои Доки/JAVA/testMuseum/src/main/resources/test.properties");
-
-            } catch (FileNotFoundException e1) {
-                e1.printStackTrace();
-            }
+            e.printStackTrace();
         }
         try {
             properties.load(fis);

@@ -40,6 +40,9 @@ public class KnigaPostupleniya {
 //        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='unit']/div/div[2]/div/div[1]/img")));
         MyWait.myWaitXPath(driver, 10, ".//*[@id='unit']/div/div[2]/div/div[1]/img");
 
+//   сохдаем столько записей в книге послуплений, сколько создали актов послуплений
+        for (int i=0;i<vsegoPredIzAktaPri;i++){
+
         //Жмем Книга поступлений Создать
         PageMain.btn_Create(driver).click();
 
@@ -81,48 +84,6 @@ public class KnigaPostupleniya {
 //Жмем ВЫбрать
         PageEdit.btn_Ok(driver).click();
 
-//
-
-//        //Жмем фильтр
-//        driver.findElement(By.xpath(buttonFilterRedact)).click();
-
-//        //Ставим галочку № Акта приема
-//        driver.findElement(By.xpath(checkFilterAktPri)).click();
-
-//        //переходим к выбору
-//        driver.findElement(By.xpath(dropDownMenu)).click();
-
-//        //ищем =
-//        List<WebElement> rovno = driver.findElement(By.xpath(dropDownMenu)).findElements(By.tagName("option"));
-
-//        for (WebElement r : rovno) {
-//
-//            if (r.getText().equals("Ровно")) {
-//                r.click();
-//                break;
-//            }
-//        }
-//
-//        //пишем в поле, номер акта
-//        driver.findElement(By.xpath(textFieldFilterRedact)).sendKeys(Integer.toString(AktPrijoma.getNomer()));
-//
-//        // жмем сохранить
-//        driver.findElement(By.xpath(buttonSaveFilterRedact)).click();
-//
-//
-//        //Явное ожидание появления акта в сиписке
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]")));
-//        try {
-//            Thread.sleep(2000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
-//        //выбираем акт
-//        driver.findElement(By.xpath(checkAktPri)).click();
-//
-//        //жмем выбрать
-//        driver.findElement(By.xpath(buttonChooseAktPri)).click();
 
         try {
             Thread.sleep(5000);
@@ -141,129 +102,31 @@ public class KnigaPostupleniya {
 //        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]")));
         MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]");
 
-        //Выбираем наименование предмета из списка
-        PageEdit.str_TableElement(driver, NaimenivaniePredmetaList.getNaimenovaniePredmetaList().get(0)).click();
+//проверяем наличие предметов в списке
+        if (NaimenivaniePredmetaList.getNaimenovaniePredmetaList().size()>0) {
+            //Выбираем наименование предмета из списка
+            PageEdit.str_TableElement(driver, NaimenivaniePredmetaList.getNaimenovaniePredmetaList().get(i)).click();
 
-        //нажимаем Выбрать
-        PageEdit.btn_Ok(driver).click();
+            //нажимаем Выбрать
+            PageEdit.btn_Ok(driver).click();
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            //Сохранить
+            PageKnigaPostupleniSozdanie.btn_Save(driver).click();
+
+            //явное ожидание загрузки страницы
+            MyWait.myWaitXPath(driver, 10, "html/body/div[2]/div/div[2]/div/div/div/div[3]/div/div/table/tbody/tr[2]/td[1]");
+        }
+        else {
+            PageEdit.btn_NotOk(driver).click();
         }
 
-        //Сохранить
-        PageKnigaPostupleniSozdanie.btn_Save(driver).click();
-
-        //Заносим все предметы в книгу поступления
-//        for (int i = 0; i < vsegoPredIzAktaPri; i++) {
-//
-//            //Жмем Книга поступлений Создать
-//            driver.findElement(By.xpath(butonCreateBookPostup)).click();
-//
-//            //Явное ожидание
-//            (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[3]/div/div/img")));
-//
-//            //проверка на заполнение №Акта приема
-//            if (driver.findElement(By.xpath(textFiledAktPri)).getAttribute("value").equals(Integer.toString(AktPrijoma.getNomer()))) {
-//
-//                //Выбираем нажимаем Книга поступлений
-//                driver.findElement(By.xpath(buttonFilterNaimPred)).click();
-//            } else {
-//
-//                //Выбираем нажимаем Книга поступлений
-//                driver.findElement(By.xpath(buttonFilterAktPriBookPost)).click();
-//
-//                //Явное ожидание
-//                (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]")));
-//
-//
-//                //Жмем фильтр
-//                driver.findElement(By.xpath(buttonFilterRedact)).click();
-//
-//                //Ставим галочку № Акта приема
-//                driver.findElement(By.xpath(checkFilterAktPri)).click();
-//
-//                //переходим к выбору
-//                driver.findElement(By.xpath(dropDownMenu)).click();
-//
-//                //ищем =
-//                List<WebElement> rov = driver.findElement(By.xpath(dropDownMenu)).findElements(By.tagName("option"));
-//
-//                for (WebElement r : rov) {
-//
-//                    if (r.getText().equals("Ровно")) {
-//                        r.click();
-//                        break;
-//                    }
-//                }
-//
-//                //пишем в поле, номер акта
-//                driver.findElement(By.xpath(textFieldFilterRedact)).sendKeys(Integer.toString(AktPrijoma.getNomer()));
-//
-//                //жмем сохранить
-//                driver.findElement(By.xpath(buttonSaveFilterRedact)).click();
-//
-//                //Явное ожидание появления акта в сиписке
-//                (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]")));
-//                try {
-//                    Thread.sleep(2000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                //выбираем акт
-//                driver.findElement(By.xpath(checkAktPri)).click();
-//
-//                //жмем выбрать
-//                driver.findElement(By.xpath(buttonChooseAktPri)).click();
-//
-//            }
-//            try {
-//                Thread.sleep(5000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//
-//            //Явное ожидание
-//            (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]")));
-//
-//            //Выбираем Наименование предмета
-//            driver.findElement(By.xpath(buttonFilterNaimPred)).click();
-//
-//            //Явное ожидание
-//            (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]")));
-//
-//            //Выбираем наименование предмета из списка
-//            driver.findElement(By.xpath(checkNaimPred)).click();
-//
-//            //нажимаем Выбрать
-//            driver.findElement(By.xpath(buttonChooseNaimPred)).click();
-//
-//            try {
-//                Thread.sleep(5000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//
-//            //Сохранить
-//            driver.findElement(By.xpath(buttonSaveBookPost)).click();
-//        }
-//
-//
-////        //Записи не найдены, нажимаем ОК
-////        driver.findElement(By.xpath(buttonOkRecordNotFound)).click();
-////
-////
-////        //нажимаем отмена
-////        driver.findElement(By.xpath(buttonCancelNaimPred)).click();
-
-
-        //явное ожидание загрузки страницы
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/form/div/div/div[1]")));
-        MyWait.myWaitXPath(driver, 10, "html/body/div[2]/div/div[2]/div/div/div/div[3]/div/div/table/tbody/tr[2]/td[1]");
-
+        }
         return driver;
     }
 }
