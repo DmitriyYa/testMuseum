@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28a6aa77-e8c3-46b2-b994-db90d34d4e22" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Helppers/CreateDate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PageAktPrijomaNaMOH.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/UserAction/AktPrijomaNaMOH.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/TestCase/TestDvijenie.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/TestCase/TestInventar.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Helppers/Nomer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources" afterPath="$PROJECT_DIR$/src/main/resources" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Helppers/SearchTable.java" afterPath="$PROJECT_DIR$/src/main/java/Helppers/SearchTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PageObjects/PageAktPrijomaSozdanie.java" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PageAktPrijomaSozdanie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PageObjects/PageCreateViewEdit.java" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PageCreateViewEdit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PageObjects/PageEdit.java" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PageEdit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PageObjects/PageMain.java" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PageMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TestCase/Main.java" afterPath="$PROJECT_DIR$/src/main/java/TestCase/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/UserAction/AktPrijoma.java" afterPath="$PROJECT_DIR$/src/main/java/UserAction/AktPrijoma.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/UserAction/AktPrijomaNaMOH.java" afterPath="$PROJECT_DIR$/src/main/java/UserAction/AktPrijomaNaMOH.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/UserAction/KnigaPostupleniya.java" afterPath="$PROJECT_DIR$/src/main/java/UserAction/KnigaPostupleniya.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
     </list>
     <ignored path="testMuseum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +29,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TestCase/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AktPrijomaNaMOH.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/UserAction/AktPrijomaNaMOH.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="111" column="35" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchComboBack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/SearchComboBack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,8 +64,8 @@
       <file leaf-file-name="PageAktPrijomaNaMOH.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageAktPrijomaNaMOH.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+            <state relative-caret-position="146">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#btn_ReviewAktPri#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
@@ -65,7 +78,6 @@
                 <element signature="method#btn_NextPagePredmIzAktPri#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
                 <element signature="method#btn_IzmenPredmIzAktPri#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
                 <element signature="method#btn_DeletSelectPredmIzAktPri#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
-                <element signature="method#txt_ZapNaStr#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
                 <element signature="method#btn_SaveZapNaStr#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
                 <element signature="method#btn_Ok#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
                 <element signature="method#btn_NotOk#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
@@ -74,26 +86,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AktPrijomaNaMOH.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/UserAction/AktPrijomaNaMOH.java">
+      <file leaf-file-name="KnigaPostupleniya.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/UserAction/KnigaPostupleniya.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AktPrijoma.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/UserAction/AktPrijoma.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="290">
+              <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,8 +99,18 @@
       <file leaf-file-name="SearchTable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/SearchTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
+            <state relative-caret-position="150">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageEdit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageEdit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,8 +119,8 @@
       <file leaf-file-name="config.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,14 +151,15 @@
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/PageEdit.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/PageCreateViewEdit.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/PageMain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/UserAction/KnigaPostupleniya.java" />
         <option value="$PROJECT_DIR$/src/main/java/Helppers/CreateDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/Helppers/SearchTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/UserAction/AktPrijomaNaMOH.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestCase/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/PageAktPrijomaNaMOH.java" />
-        <option value="$PROJECT_DIR$/src/main/java/UserAction/AktPrijoma.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Helppers/Nomer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TestCase/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/UserAction/AktPrijoma.java" />
+        <option value="$PROJECT_DIR$/src/main/java/UserAction/KnigaPostupleniya.java" />
+        <option value="$PROJECT_DIR$/src/main/java/UserAction/AktPrijomaNaMOH.java" />
       </list>
     </option>
   </component>
@@ -194,164 +203,7 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserAction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestCase" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PageObjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testMuseum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Helppers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
@@ -604,10 +456,17 @@
       <option name="project" value="LOCAL" />
       <updated>1479986086129</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="добавил Акти приема на МОХ, не закончил">
+      <created>1480141122152</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1480141122152</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -626,16 +485,16 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17238913" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52487564" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28233832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37064677" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3818408" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.4950249" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546495" sideWeight="0.4950249" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25608012" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.50497514" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39925373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42412937" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -676,25 +535,29 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FirstCommit" />
     <MESSAGE value="стабильная сборка Акт приема, Книга поступлений" />
-    <option name="LAST_COMMIT_MESSAGE" value="стабильная сборка Акт приема, Книга поступлений" />
+    <MESSAGE value="добавил Акти приема на МОХ, не закончил" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил Акти приема на МОХ, не закончил" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/PageObjects/PageAktPrijomaNaMOH.java</url>
-          <line>230</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Helppers/SearchTable.java</url>
+          <line>19</line>
           <properties />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/UserAction/AktPrijoma.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/src/main/java/UserAction/AktPrijomaNaMOH.java</url>
+          <line>106</line>
           <properties />
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -775,22 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/MyWait.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/WorkWithPropertyFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -815,18 +662,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/SearchComboBack.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/CreateDate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageAktPrijomaSozdanie.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="69" selection-end-column="5" />
+        <state relative-caret-position="323">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -839,22 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="76" column="0" selection-start-line="59" selection-start-column="4" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageCreateViewEdit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -863,36 +696,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/CreateDate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/MyWait.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UserAction/KnigaPostupleniya.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        <state relative-caret-position="209">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/SearchTable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/Nomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/UserAction/AktPrijoma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="72" column="98" selection-start-line="72" selection-start-column="98" selection-end-line="72" selection-end-column="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageAktPrijomaSozdanie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TestCase/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/SearchComboBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageAktPrijomaNaMOH.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+        <state relative-caret-position="146">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#btn_ReviewAktPri#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
@@ -905,7 +781,6 @@
             <element signature="method#btn_NextPagePredmIzAktPri#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
             <element signature="method#btn_IzmenPredmIzAktPri#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
             <element signature="method#btn_DeletSelectPredmIzAktPri#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
-            <element signature="method#txt_ZapNaStr#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
             <element signature="method#btn_SaveZapNaStr#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
             <element signature="method#btn_Ok#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
             <element signature="method#btn_NotOk#0;class#ViborPredmetaRegAktaPrijNaMOH#0;class#PageAktPrijomaNaMOH#0" expanded="false" />
@@ -913,39 +788,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Helppers/SearchTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PageEdit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/UserAction/KnigaPostupleniya.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UserAction/AktPrijomaNaMOH.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+        <state relative-caret-position="180">
+          <caret line="111" column="35" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UserAction/AktPrijoma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestCase/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -1,15 +1,13 @@
 package UserAction;
 
-import Helppers.CreateDate;
-import Helppers.MyWait;
-import Helppers.NaimenivaniePredmetaList;
+import Helppers.*;
 import PageObjects.PageAktPrijomaSozdanie;
 import PageObjects.PageCreateViewEdit;
 import PageObjects.PageEdit;
 import PageObjects.PageMain;
-import Helppers.WorkWithPropertyFile;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -28,14 +26,13 @@ public class AktPrijoma {
     private static final int vsegoPredIzAktaPri = Integer.parseInt(properties.getProperty("vsegoPredIzAktaPri"));
     private static final String kolPredIzAktaPri = properties.getProperty("kolPredIzAktaPri");
 
-
-    //    Генерим номер акта прием и протокола решения ФОК
-    private static int nomer = new Random().nextInt(10000);
-
-    public static int getNomer() {
-//        return nomer;
-        return 9427;
-    }
+//    //    Генерим номер акта прием и протокола решения ФОК
+//    private static int nomer = new Random().nextInt(10000);
+//
+//    public static int getNomer() {
+//        return nomerAktPrijima;
+////        return 9427;
+//    }
 
 //    public static void setNomer(int nomer) {
 //        AktPrijoma.nomer = nomer;
@@ -73,13 +70,13 @@ public class AktPrijoma {
         MyWait.myWaitXPath(driver, 10, "html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[1]/td[2]/div/input");
 
         //заполняем акт приёма
-        PageAktPrijomaSozdanie.txtbx_AktPtijoma(driver).sendKeys(Integer.toString(nomer));
+        PageAktPrijomaSozdanie.txtbx_AktPtijoma(driver).sendKeys(Integer.toString(Nomer.getNomer()));
 
 //        //создаем текущую Дату
 //        Date date = new Date();
 //        SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy");
 //        String[] s = format1.format(date).split("\\.");
-        String[] s=CreateDate.createDate();
+        String[] s = CreateDate.createDate();
 
         //заполняем Дата акта приема, текущей датой
         PageAktPrijomaSozdanie.txtbx_DataAktPtijomaDya(driver).sendKeys(s[0]);
@@ -103,7 +100,7 @@ public class AktPrijoma {
         PageEdit.btn_Ok(driver).click();
 
         //№ протокола решения ФОК
-        PageAktPrijomaSozdanie.txtbx_NomerProtokolaReshFOK(driver).sendKeys(Integer.toString(nomer));
+        PageAktPrijomaSozdanie.txtbx_NomerProtokolaReshFOK(driver).sendKeys(Integer.toString(Nomer.getNomer()));
 
         //Дата протокола решения
         PageAktPrijomaSozdanie.txtbx_DataProtokolaReshDya(driver).sendKeys(s[0]);

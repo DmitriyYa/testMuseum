@@ -1,9 +1,6 @@
 package UserAction;
 
-import Helppers.CreateDate;
-import Helppers.MyWait;
-import Helppers.SearchComboBack;
-import Helppers.WorkWithPropertyFile;
+import Helppers.*;
 import PageObjects.PageAktPrijomaNaMOH;
 import PageObjects.PageAktPrijomaSozdanie;
 import PageObjects.PageMain;
@@ -25,15 +22,8 @@ public class AktPrijomaNaMOH {
     private static Properties properties = WorkWithPropertyFile.createProperti();
     private static final int vsegoPredIzAktaPri = Integer.parseInt(properties.getProperty("vsegoPredIzAktaPri"));
 
-    //    Генерим номер Акта приема на материально-ответственное хранение
-    private static int nomer = new Random().nextInt(10000);
 
-    public static int getNomer() {
-        return nomer;
-    }
-
-
-    public static WebDriver createAktPrijomaNaMOH(WebDriver driver)     {
+    public static WebDriver createAktPrijomaNaMOH(WebDriver driver) {
 
         // Ищем в меню Инвентаризация
         PageMain.menu(driver, "Инвентаризация").click();
@@ -52,7 +42,7 @@ public class AktPrijomaNaMOH {
         MyWait.myWaitXPath(driver, 10, "html/body/div[4]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/div/table/tbody/tr[2]/td[2]/div/input");
 
 //Вводим номер Акта приема на материально-ответственное хранение
-        PageAktPrijomaNaMOH.txtbx_AktPtijomaNaMOH(driver).sendKeys(Integer.toString(nomer));
+        PageAktPrijomaNaMOH.txtbx_AktPtijomaNaMOH(driver).sendKeys(Integer.toString(Nomer.getNomer()));
 
 //        Создаем текущую дату
         String[] date = CreateDate.createDate();
@@ -65,7 +55,7 @@ public class AktPrijomaNaMOH {
 
 //        выбираем Вид фонда
         PageAktPrijomaNaMOH.btn_VidFonda(driver).click();
-        MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]");
+        MyWait.myWaitXPath(driver, 20, "html/body/div[5]/div/div/div/div/div/div[1]");
         PageAktPrijomaNaMOH.combox_VidFonda(driver, "основной").click();
 
 //        Выбираем Группу коллекций
@@ -92,31 +82,48 @@ public class AktPrijomaNaMOH {
         MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div[2]/table/tbody/tr/td[8]/div/div");
 
 //        Ищем акт приема в таблице.
-        int nomerAktePrijoma = AktPrijoma.getNomer();
-        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_IzmenAktPri(driver).click();
-        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.txt_ZapNaStr(driver).clear();
-        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.txt_ZapNaStr(driver).sendKeys("50");
-        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_SaveZapNaStr(driver).click();
+//        int nomerAktePrijoma = AktPrijoma.getNomer();
+//          PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_IzmenAktPri(driver).click();
+//        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.txt_ZapNaStr(driver).clear();
+//        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.txt_ZapNaStr(driver).sendKeys("50");
+//        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_SaveZapNaStr(driver).click();
         MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div[3]/div/div/table/tbody/tr[20]/td[1]");
-        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.str_TableElementAktPri(driver, Integer.toString(nomerAktePrijoma)).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.str_TableElementAktPri(driver, Integer.toString(Nomer.getNomer())).click();
 
 //        Изменяем отображаемый список эелементов в предмет из акта приема
+        MyWait.myWaitXPath(driver,10,"html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[2]/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]");
         PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_IzmenPredmIzAktPri(driver).click();
         PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.txt_ZapNaStr(driver).clear();
         PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.txt_ZapNaStr(driver).sendKeys(Integer.toString(vsegoPredIzAktaPri));
         PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_SaveZapNaStr(driver).click();
+        MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[2]/td/div/div[3]/div/div/table/tbody/tr[2]");
 
 //Выбираем все предметы из Акта приема
-        for (int i = 0; i < vsegoPredIzAktaPri; i++) {
-        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.str_TableElementPredmIzAktPri(driver,i).click();
+        for (int i = 1; i < vsegoPredIzAktaPri+1; i++) {
+            PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.str_TableElementPredmIzAktPri(driver, i).click();
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_AddPredmIzAktPri(driver).click();
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
 //сохраняем выбор предметов
         PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_Ok(driver).click();
 
 //        ждем закрытия окна
-        MyWait.myWaitXPath(driver,10,"html/body/div[4]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/div/table/tbody/tr[24]/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]");
+        MyWait.myWaitXPath(driver, 10, "html/body/div[4]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/div/table/tbody/tr[24]/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]");
 
 //        сохраняем Акт приема на материально-ответственное хранение
         PageAktPrijomaNaMOH.btn_Ok(driver).click();

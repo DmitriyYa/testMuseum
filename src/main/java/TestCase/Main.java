@@ -1,5 +1,6 @@
 package TestCase;
 
+import Helppers.Nomer;
 import Helppers.WorkWithPropertyFile;
 import UserAction.AktPrijoma;
 import UserAction.AktPrijomaNaMOH;
@@ -23,8 +24,8 @@ public class Main {
         WebDriver driver = new ChromeDriver();
 
         LogIn.logIn(driver);
-//        AktPrijoma.createAktPrijoma(driver);
-//        KnigaPostupleniya.createKnigaPostupleniya(driver);
+        AktPrijoma.createAktPrijoma(driver);
+        KnigaPostupleniya.createKnigaPostupleniya(driver);
         AktPrijomaNaMOH.createAktPrijomaNaMOH(driver);
 
     }
