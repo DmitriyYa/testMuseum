@@ -37,10 +37,9 @@ public class KnigaPostupleniya {
         PageMain.menu(driver, "Книга поступлений").click();
 
         //явное ожидание загрузки страницы
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='unit']/div/div[2]/div/div[1]/img")));
         MyWait.myWaitXPath(driver, 10, ".//*[@id='unit']/div/div[2]/div/div[1]/img");
 
-//   сохдаем столько записей в книге послуплений, сколько создали актов послуплений
+//   создаем столько записей в книге послуплений, сколько создали актов послуплений
         for (int i=0;i<vsegoPredIzAktaPri;i++){
 
         //Жмем Книга поступлений Создать

@@ -1,5 +1,6 @@
 package UserAction;
 
+import Helppers.CreateDate;
 import Helppers.MyWait;
 import Helppers.NaimenivaniePredmetaList;
 import PageObjects.PageAktPrijomaSozdanie;
@@ -8,11 +9,7 @@ import PageObjects.PageEdit;
 import PageObjects.PageMain;
 import Helppers.WorkWithPropertyFile;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -36,7 +33,8 @@ public class AktPrijoma {
     private static int nomer = new Random().nextInt(10000);
 
     public static int getNomer() {
-        return nomer;
+//        return nomer;
+        return 9427;
     }
 
 //    public static void setNomer(int nomer) {
@@ -77,10 +75,11 @@ public class AktPrijoma {
         //заполняем акт приёма
         PageAktPrijomaSozdanie.txtbx_AktPtijoma(driver).sendKeys(Integer.toString(nomer));
 
-        //создаем текущую Дату
-        Date date = new Date();
-        SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy");
-        String[] s = format1.format(date).split("\\.");
+//        //создаем текущую Дату
+//        Date date = new Date();
+//        SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy");
+//        String[] s = format1.format(date).split("\\.");
+        String[] s=CreateDate.createDate();
 
         //заполняем Дата акта приема, текущей датой
         PageAktPrijomaSozdanie.txtbx_DataAktPtijomaDya(driver).sendKeys(s[0]);

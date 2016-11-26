@@ -2,6 +2,7 @@ package TestCase;
 
 import Helppers.WorkWithPropertyFile;
 import UserAction.AktPrijoma;
+import UserAction.AktPrijomaNaMOH;
 import UserAction.KnigaPostupleniya;
 import UserAction.LogIn;
 import org.openqa.selenium.WebDriver;
@@ -22,8 +23,9 @@ public class Main {
         WebDriver driver = new ChromeDriver();
 
         LogIn.logIn(driver);
-        AktPrijoma.createAktPrijoma(driver);
-        KnigaPostupleniya.createKnigaPostupleniya(driver);
+//        AktPrijoma.createAktPrijoma(driver);
+//        KnigaPostupleniya.createKnigaPostupleniya(driver);
+        AktPrijomaNaMOH.createAktPrijomaNaMOH(driver);
 
     }
 

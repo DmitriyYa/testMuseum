@@ -42,7 +42,7 @@ public class PageAktPrijomaSozdanie {
 
     /**
      * @param driver
-     * @return the текстовое поле Дата акта приема Год
+     * @return  текстовое поле Дата акта приема Год
      */
     public static WebElement txtbx_DataAktPtijomaYear(WebDriver driver) {
         element = driver.findElement(By.xpath("html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[2]/td[2]/div/table/tbody/tr/td[1]/div/input[3]"));
@@ -51,7 +51,7 @@ public class PageAktPrijomaSozdanie {
 
     /**
      * @param driver
-     * @return the кнопка Вид фонда
+     * @return  кнопка Вид фонда
      */
     public static WebElement btn_VidFonda(WebDriver driver) {
         element = driver.findElement(By.xpath("/html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[3]/td[2]/div/table/tbody/tr/td[3]/div/div/img"));

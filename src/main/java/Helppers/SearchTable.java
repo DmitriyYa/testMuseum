@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class SearchTable {
 
-    public static WebElement serchTable(WebElement table, String atributTable) {
+    public static WebElement serchTableAtribut(WebElement table, String atributTable) {
         WebElement element = null;
 
         List<WebElement> tr = table.findElements(By.tagName("tr"));
@@ -27,6 +27,21 @@ public class SearchTable {
                     break;
                 }
 
+            }
+
+        }
+        return element;
+    }
+
+    public static WebElement serchTablePosition(WebElement table, int i) {
+        WebElement element = null;
+
+        List<WebElement> tr = table.findElements(By.tagName("tr"));
+
+        for (int j=0;j<tr.size();j++){
+            if(j==i){
+                element=tr.get(j);
+                break;
             }
 
         }
