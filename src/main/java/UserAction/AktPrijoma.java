@@ -18,7 +18,7 @@ import java.util.*;
 public class AktPrijoma {
 
     //подключаем логи
-    public static final Logger log = Logger.getLogger(AktPrijoma.class.getName());
+    public static Logger log = Logger.getLogger(AktPrijoma.class.getName());
 
 
     //подключаем проперти файл
@@ -26,30 +26,13 @@ public class AktPrijoma {
     private static final int vsegoPredIzAktaPri = Integer.parseInt(properties.getProperty("vsegoPredIzAktaPri"));
     private static final String kolPredIzAktaPri = properties.getProperty("kolPredIzAktaPri");
 
-//    //    Генерим номер акта прием и протокола решения ФОК
-//    private static int nomer = new Random().nextInt(10000);
-//
-//    public static int getNomer() {
-//        return nomerAktPrijima;
-////        return 9427;
-//    }
-
-//    public static void setNomer(int nomer) {
-//        AktPrijoma.nomer = nomer;
-//    }
-
 
     public static WebDriver createAktPrijoma(WebDriver driver) {
-
-
-        log.info("Вошли в систему");
-
 
         // в меню ищем Поступление, и нажимаем
         PageMain.menu(driver, "Поступление").click();
 
         //явное ожидание загрузки страницы
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.className("menuPopupMiddle")));
         MyWait.myWaitClassName(driver, 10, "menuPopupMiddle");
 
         // ищем в списке Поступление, Акт пиёма и нажимаем
@@ -57,25 +40,18 @@ public class AktPrijoma {
 
 
         //явное ожидание загрузки страницы
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='unit']/div/div[2]/div/div[1]/img")));
         MyWait.myWaitXPath(driver, 10, ".//*[@id='unit']/div/div[2]/div/div[1]/img");
-
-        log.error("Что-то случилось!");
 
         //Жмем Акт приема Создать
         PageMain.btn_Create(driver).click();
 
         //явное ожидание загрузки страницы
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[1]/td[2]/div/input")));
         MyWait.myWaitXPath(driver, 10, "html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[1]/td[2]/div/input");
 
         //заполняем акт приёма
         PageAktPrijomaSozdanie.txtbx_AktPtijoma(driver).sendKeys(Integer.toString(Nomer.getNomer()));
 
 //        //создаем текущую Дату
-//        Date date = new Date();
-//        SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy");
-//        String[] s = format1.format(date).split("\\.");
         String[] s = CreateDate.createDate();
 
         //заполняем Дата акта приема, текущей датой
@@ -85,16 +61,16 @@ public class AktPrijoma {
 
         //вывбираем Вид фонда
         PageAktPrijomaSozdanie.btn_VidFonda(driver).click();
+
 //        явное ожидание
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[2]/div[2]")));
         MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[2]/div[2]");
         PageAktPrijomaSozdanie.combox_VidFonda(driver, "основной").click();
 
 
         //ФИО Директора
         PageAktPrijomaSozdanie.btn_FIODorectora(driver).click();
+
 //       явное ожидание
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]")));
         MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]");
         PageEdit.str_TableElement(driver, "заместитель директора").click();
         PageEdit.btn_Ok(driver).click();
@@ -127,7 +103,6 @@ public class AktPrijoma {
             PageAktPrijomaSozdanie.btn_PredmetIzAktePriemaSozdanie(driver).click();
 
             //явное ожидание загрузки страницы
-//            (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/div/table/tbody/tr[2]/td[2]/div/input")));
             MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/div/table/tbody/tr[2]/td[2]/div/input");
             String naimenovaniePredmeta = "Наименование предмета" + i;
             NaimenivaniePredmetaList.setNaimenovaniePredmetaList(naimenovaniePredmeta);
@@ -149,8 +124,9 @@ public class AktPrijoma {
         PageCreateViewEdit.btn_Save(driver).click();
 
         //явное ожидание загрузки страницы
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.className("gwt-MenuItem")));
         MyWait.myWaitClassName(driver, 10, "gwt-MenuItem");
+
+        log.info("Акт приема создан");
         return driver;
 
     }

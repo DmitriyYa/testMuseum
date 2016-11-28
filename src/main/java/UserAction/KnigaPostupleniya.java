@@ -21,7 +21,7 @@ import java.util.Properties;
 public class KnigaPostupleniya {
 
     //подключаем логи
-    private static final Logger log = Logger.getLogger(AktPrijoma.class.getName());
+    private static Logger log = Logger.getLogger(KnigaPostupleniya.class.getName());
 
     //подключаем проперти файл
     private static Properties properties = WorkWithPropertyFile.createProperti();
@@ -46,21 +46,18 @@ public class KnigaPostupleniya {
             PageMain.btn_Create(driver).click();
 
             //Явное ожидание
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[3]/div/div/img")));
             MyWait.myWaitXPath(driver, 10, "html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[3]/div/div/img");
 
             //нажимаем фильтр Акт приема
             PageKnigaPostupleniSozdanie.btn_AktPtijoma(driver).click();
 
             //Явное ожидание
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]")));
             MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]");
 
 //        Жмем Изменить
             PageEdit.btn_Izmen(driver).click();
 
             //Явное ожидание
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[6]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td[2]/div/input")));
             MyWait.myWaitXPath(driver, 10, "html/body/div[6]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td[2]/div/input");
 
 //        очистить
@@ -73,7 +70,6 @@ public class KnigaPostupleniya {
             PageEdit.btn_Save(driver).click();
 
             //Явное ожидание
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody")));
             MyWait.myWaitXPath(driver, 20, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody");
 
 //        Ищем элемент в таблице и нажимаем
@@ -91,14 +87,12 @@ public class KnigaPostupleniya {
             }
 
             //Явное ожидание
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[11]/td/div/div[3]/div")));
             MyWait.myWaitXPath(driver, 10, "html/body/div[4]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div[1]/div/div/div/div/div/table/tbody/tr[11]/td/div/div[3]/div");
 
             //Выбираем Наименование предмета
             PageKnigaPostupleniSozdanie.btn_NaimenovaniePredmeta(driver).click();
 
             //Явное ожидание
-//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]")));
             MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody/tr[2]/td[1]");
 
 //проверяем наличие предметов в списке
@@ -125,6 +119,7 @@ public class KnigaPostupleniya {
             }
 
         }
+        log.info("Экспонаты из акта приема внесены в книгу поступлений");
         return driver;
     }
 }

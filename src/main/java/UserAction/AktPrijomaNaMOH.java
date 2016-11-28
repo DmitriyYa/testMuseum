@@ -16,7 +16,7 @@ import java.util.Random;
 public class AktPrijomaNaMOH {
 
     //подключаем логи
-    private static final Logger log = Logger.getLogger(AktPrijoma.class.getName());
+    private static Logger log = Logger.getLogger(AktPrijomaNaMOH.class.getName());
 
     //подключаем проперти файл
     private static Properties properties = WorkWithPropertyFile.createProperti();
@@ -82,12 +82,7 @@ public class AktPrijomaNaMOH {
         MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div[2]/table/tbody/tr/td[8]/div/div");
 
 //        Ищем акт приема в таблице.
-//        int nomerAktePrijoma = AktPrijoma.getNomer();
-//          PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_IzmenAktPri(driver).click();
-//        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.txt_ZapNaStr(driver).clear();
-//        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.txt_ZapNaStr(driver).sendKeys("50");
-//        PageAktPrijomaNaMOH.ViborPredmetaRegAktaPrijNaMOH.btn_SaveZapNaStr(driver).click();
-        MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div[3]/div/div/table/tbody/tr[20]/td[1]");
+       MyWait.myWaitXPath(driver, 10, "html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div[3]/div/div/table/tbody/tr[20]/td[1]");
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -128,6 +123,7 @@ public class AktPrijomaNaMOH {
 //        сохраняем Акт приема на материально-ответственное хранение
         PageAktPrijomaNaMOH.btn_Ok(driver).click();
 
+        log.info("Акт приема на материально-ответственное хранение создан");
         return driver;
 
     }
