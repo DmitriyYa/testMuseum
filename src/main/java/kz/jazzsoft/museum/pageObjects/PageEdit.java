@@ -17,7 +17,7 @@ public class PageEdit {
      */
     public static WebElement str_TableElement(WebDriver driver, String elementTable) {
         WebElement table = driver.findElement(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr/td/div/div[3]/div/div/table/tbody"));
-        element = SearchTable.serchTableAtribut(table, elementTable);
+        element = SearchTable.searchTableAttribute(table, elementTable);
         return element;
     }
 

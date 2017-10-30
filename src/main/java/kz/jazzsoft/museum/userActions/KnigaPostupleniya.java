@@ -21,7 +21,7 @@ public class KnigaPostupleniya {
     private static Logger log = Logger.getLogger(KnigaPostupleniya.class.getName());
 
     //подключаем проперти файл
-    private static Properties properties = WorkWithPropertyFile.createProperti();
+    private static Properties properties = WorkWithPropertyFile.loadProperties();
     private static int vsegoPredIzAktaPri = Integer.parseInt(properties.getProperty("vsegoPredIzAktaPri"));
 
     public static WebDriver createKnigaPostupleniya(WebDriver driver) {

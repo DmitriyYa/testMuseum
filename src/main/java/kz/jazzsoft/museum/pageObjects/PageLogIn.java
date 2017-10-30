@@ -14,7 +14,7 @@ public class PageLogIn {
     private static WebElement element = null;
 
     //подключаем проперти файл
-    private static Properties properties = WorkWithPropertyFile.createProperti();
+    private static Properties properties = WorkWithPropertyFile.loadProperties();
 
     /**
      * @param driver

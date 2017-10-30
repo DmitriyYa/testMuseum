@@ -183,7 +183,7 @@ public class PageAktPrijomaNaMOH {
          */
         public static WebElement str_TableElementAktPri(WebDriver driver, String elementTable) {
             WebElement table = driver.findElement(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[1]/td/div/div[3]/div/div/table/tbody"));
-            element = SearchTable.serchTableAtribut(table, elementTable);
+            element = SearchTable.searchTableAttribute(table, elementTable);
             return element;
         }
 
@@ -229,7 +229,7 @@ public class PageAktPrijomaNaMOH {
          */
         public static WebElement str_TableElementPredmIzAktPri(WebDriver driver, int i) {
             WebElement table = driver.findElement(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[2]/td/div/div[3]/div/div/table/tbody"));
-            element = SearchTable.serchTablePosition(table,i);
+            element = SearchTable.searchTablePosition(table,i);
             return element;
         }
 
@@ -285,7 +285,7 @@ public class PageAktPrijomaNaMOH {
          */
         public static WebElement str_TableElementSelectPredmIzAktPri(WebDriver driver, int i) {
             WebElement table = driver.findElement(By.xpath("html/body/div[5]/div/div/div/div/div/div[1]/div[2]/div[1]/div/div/div/table/tbody/tr[3]/td/div/div[3]/div/div/table/tbody"));
-            element = SearchTable.serchTablePosition(table,i);
+            element = SearchTable.searchTablePosition(table,i);
             return element;
         }
 

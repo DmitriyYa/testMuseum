@@ -20,7 +20,7 @@ public class AktPrijomaNaMOH {
     private static Logger log = Logger.getLogger(AktPrijomaNaMOH.class.getName());
 
     //подключаем проперти файл
-    private static Properties properties = WorkWithPropertyFile.createProperti();
+    private static Properties properties = WorkWithPropertyFile.loadProperties();
     private static final int vsegoPredIzAktaPri = Integer.parseInt(properties.getProperty("vsegoPredIzAktaPri"));
 
 

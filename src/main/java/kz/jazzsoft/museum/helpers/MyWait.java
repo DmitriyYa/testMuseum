@@ -13,29 +13,29 @@ public class MyWait {
     /*
      //явное ожидание загрузки страницы по XPath
      */
-    public static void myWaitXPath(WebDriver driver, int watSeconds, String stringEllement) {
-        (new WebDriverWait(driver, watSeconds)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(stringEllement)));
+    public static void myWaitXPath(WebDriver driver, int waitSeconds, String stringElement) {
+        (new WebDriverWait(driver, waitSeconds)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(stringElement)));
     }
 
     /*
      //явное ожидание загрузки страницы по ClassName
      */
-    public static void myWaitClassName(WebDriver driver, int watSeconds, String stringEllement) {
-        (new WebDriverWait(driver, watSeconds)).until(ExpectedConditions.presenceOfElementLocated(By.className(stringEllement)));
+    public static void myWaitClassName(WebDriver driver, int waitSeconds, String stringElement) {
+        (new WebDriverWait(driver, waitSeconds)).until(ExpectedConditions.presenceOfElementLocated(By.className(stringElement)));
     }
 
     /*
      //явное ожидание загрузки страницы по name
      */
-    public static void myWaitName(WebDriver driver, int watSeconds, String stringEllement) {
-        (new WebDriverWait(driver, watSeconds)).until(ExpectedConditions.presenceOfElementLocated(By.name(stringEllement)));
+    public static void myWaitName(WebDriver driver, int waitSeconds, String stringElement) {
+        (new WebDriverWait(driver, waitSeconds)).until(ExpectedConditions.presenceOfElementLocated(By.name(stringElement)));
     }
 
     /*
      //явное ожидание загрузки страницы по id
      */
-    public static void myWaitId(WebDriver driver, int watSeconds, String stringEllement) {
-        (new WebDriverWait(driver, watSeconds)).until(ExpectedConditions.presenceOfElementLocated(By.id(stringEllement)));
+    public static void myWaitId(WebDriver driver, int waitSeconds, String stringElement) {
+        (new WebDriverWait(driver, waitSeconds)).until(ExpectedConditions.presenceOfElementLocated(By.id(stringElement)));
     }
 
 }

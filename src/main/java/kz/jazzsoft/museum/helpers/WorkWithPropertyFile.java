@@ -13,7 +13,7 @@ import java.util.Properties;
 public class WorkWithPropertyFile {
 
 
-    public static Properties createProperti()  {
+    public static Properties loadProperties()  {
         FileInputStream fis = null;
         Properties properties = new Properties();
 

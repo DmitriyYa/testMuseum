@@ -19,7 +19,7 @@ public class LogIn {
     //подключаем логи
     private static Logger log = Logger.getLogger(LogIn.class.getName());
 
-    private static Properties properties = WorkWithPropertyFile.createProperti();
+    private static Properties properties = WorkWithPropertyFile.loadProperties();
     private static final String userName = properties.getProperty("userName");
     private static final String password = properties.getProperty("userPassword");
 
@@ -27,7 +27,7 @@ public class LogIn {
     param
     return driver
      */
-    //Пазитивный сценарий
+    //Позитивный сценарий
     public static WebDriver logIn(WebDriver driver) {
 
         // идем по адресу музея

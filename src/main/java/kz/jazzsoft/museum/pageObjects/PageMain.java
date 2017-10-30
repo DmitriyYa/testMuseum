@@ -34,7 +34,7 @@ public class PageMain {
      */
     public static WebElement str_Akt(WebDriver driver, String nomerString) {
         WebElement table = driver.findElement(By.xpath("html/body/div[2]/div/div[2]/div/div/div/div[3]/div/div/table/tbody"));
-        element = SearchTable.serchTableAtribut(table, nomerString);
+        element = SearchTable.searchTableAttribute(table, nomerString);
         return element;
     }
 
