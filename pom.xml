@@ -2,9 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>kz.museum</groupId>
+  <groupId>kz.jazzsoft.museum</groupId>
   <artifactId>testMuseum</artifactId>
-  <version>1-snapshot</version>
+  <version>0.1.0-SNAPSHOT</version>
 
   <name>testMuseum</name>
   <url>http:https://192.168.8.152:8443/museum/login.jsp?locale=ru</url>
@@ -64,48 +64,21 @@
       </plugin>
 
       <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifest>
-              <mainClass>TestCase.Main</mainClass>
-            </manifest>
-          </archive>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-        </configuration>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>1.5.8.RELEASE</version>
         <executions>
           <execution>
-            <id>make-assembly</id> <!-- this is used for inheritance merges -->
-            <phase>package</phase> <!-- bind to the packaging phase -->
             <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.4</version>
-        <executions>
-          <execution>
-            <id>copy-dependencies</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
+              <goal>repackage</goal>
             </goals>
             <configuration>
-              <includeScope>compile</includeScope>
-              <outputDirectory>${project.build.directory}/lib</outputDirectory>
+              <classifier>jar-with-dependencies</classifier>
+              <mainClass>kz.jazzsoft.museum.Main</mainClass>
             </configuration>
           </execution>
         </executions>
       </plugin>
-
 
     </plugins>
   </build>
