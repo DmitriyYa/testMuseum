@@ -1,8 +1,11 @@
 package kz.jazzsoft.museum.helpers;
 
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -11,23 +14,28 @@ import java.util.Properties;
 public class WorkWithPropertyFile {
 
 
-    public static Properties loadProperties()  {
-        FileInputStream fis = null;
-        Properties properties = new Properties();
-
-        try {
-//            fis = new FileInputStream("c:\\TestMuseum\\config.properties");
-                            fis=new FileInputStream("/Users/dima/Desktop/Мои Доки/JAVA/testMuseum/src/main/resources/config.properties");
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        try {
-            properties.load(fis);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return properties;
-    }
+	public static Properties loadProperties() {
+		List<String> sources = Arrays.asList(
+				".",
+				"./src/main/resources",
+				System.getProperty("user.home", "") + File.separator + "/museum",
+				"c:\\TestMuseum\\",
+				"/Users/dima/Desktop/Мои Доки/JAVA/testMuseum/src/main/resources/"
+		);
+		Properties properties = new Properties();
+		List<IOException> exceptions = new ArrayList<>(sources.size());
+		for (String source : sources) {
+			try (FileInputStream fis = new FileInputStream(new File(source, "config.properties"))) {
+				properties.load(fis);
+				return properties;
+			} catch (IOException e) {
+				exceptions.add(e);
+			}
+		}
+		for (IOException exception : exceptions) {
+			exception.printStackTrace();
+		}
+		return properties;
+	}
 
 }
