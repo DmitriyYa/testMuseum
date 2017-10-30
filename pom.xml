@@ -4,7 +4,7 @@
 
   <groupId>kz.jazzsoft.museum</groupId>
   <artifactId>testMuseum</artifactId>
-  <version>1-snapshot</version>
+  <version>0.1.0-SNAPSHOT</version>
 
   <name>testMuseum</name>
   <url>http:https://192.168.8.152:8443/museum/login.jsp?locale=ru</url>
