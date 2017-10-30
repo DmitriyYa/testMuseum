@@ -1,6 +1,6 @@
-package PageObjects;
+package kz.jazzsoft.museum.pageObjects;
 
-import Helppers.WorkWithPropertyFile;
+import kz.jazzsoft.museum.helpers.WorkWithPropertyFile;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

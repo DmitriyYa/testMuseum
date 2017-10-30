@@ -1,4 +1,4 @@
-package Helppers;
+package kz.jazzsoft.museum.helpers;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

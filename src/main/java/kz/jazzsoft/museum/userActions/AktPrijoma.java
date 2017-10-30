@@ -1,14 +1,13 @@
-package UserAction;
+package kz.jazzsoft.museum.userActions;
 
-import Helppers.*;
-import PageObjects.PageAktPrijomaSozdanie;
-import PageObjects.PageCreateViewEdit;
-import PageObjects.PageEdit;
-import PageObjects.PageMain;
+import kz.jazzsoft.museum.pageObjects.PageAktPrijomaSozdanie;
+import kz.jazzsoft.museum.pageObjects.PageCreateViewEdit;
+import kz.jazzsoft.museum.pageObjects.PageEdit;
+import kz.jazzsoft.museum.pageObjects.PageMain;
+import kz.jazzsoft.museum.helpers.*;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 

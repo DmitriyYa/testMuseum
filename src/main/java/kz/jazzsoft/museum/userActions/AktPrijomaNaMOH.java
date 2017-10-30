@@ -1,14 +1,15 @@
-package UserAction;
+package kz.jazzsoft.museum.userActions;
 
-import Helppers.*;
-import PageObjects.PageAktPrijomaNaMOH;
-import PageObjects.PageAktPrijomaSozdanie;
-import PageObjects.PageMain;
+import kz.jazzsoft.museum.pageObjects.PageAktPrijomaNaMOH;
+import kz.jazzsoft.museum.pageObjects.PageMain;
+import kz.jazzsoft.museum.helpers.CreateDate;
+import kz.jazzsoft.museum.helpers.MyWait;
+import kz.jazzsoft.museum.helpers.Nomer;
+import kz.jazzsoft.museum.helpers.WorkWithPropertyFile;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Properties;
-import java.util.Random;
 
 /**
  * Created by dima on 25.11.16.

@@ -1,4 +1,4 @@
-package Helppers;
+package kz.jazzsoft.museum.helpers;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

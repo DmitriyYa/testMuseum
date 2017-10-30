@@ -1,7 +1,7 @@
-package PageObjects;
+package kz.jazzsoft.museum.pageObjects;
 
-import Helppers.SearchComboBack;
-import Helppers.SearchTable;
+import kz.jazzsoft.museum.helpers.SearchComboBack;
+import kz.jazzsoft.museum.helpers.SearchTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

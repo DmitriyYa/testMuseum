@@ -1,15 +1,11 @@
-package TestCase;
+package kz.jazzsoft.museum;
 
-import Helppers.Nomer;
-import Helppers.WorkWithPropertyFile;
-import UserAction.AktPrijoma;
-import UserAction.AktPrijomaNaMOH;
-import UserAction.KnigaPostupleniya;
-import UserAction.LogIn;
+import kz.jazzsoft.museum.userActions.AktPrijoma;
+import kz.jazzsoft.museum.userActions.AktPrijomaNaMOH;
+import kz.jazzsoft.museum.userActions.KnigaPostupleniya;
+import kz.jazzsoft.museum.userActions.LogIn;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.Properties;
 
 /**
  * Created by dima on 16.11.16.

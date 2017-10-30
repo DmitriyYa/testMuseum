@@ -68,7 +68,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>TestCase.Main</mainClass>
+              <mainClass>kz.jazzsoft.museum.Main</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

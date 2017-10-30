@@ -1,4 +1,4 @@
-package Helppers;
+package kz.jazzsoft.museum.helpers;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

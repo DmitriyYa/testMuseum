@@ -1,17 +1,14 @@
-package UserAction;
+package kz.jazzsoft.museum.userActions;
 
-import Helppers.MyWait;
-import Helppers.NaimenivaniePredmetaList;
-import Helppers.Nomer;
-import Helppers.WorkWithPropertyFile;
-import PageObjects.PageEdit;
-import PageObjects.PageKnigaPostupleniSozdanie;
-import PageObjects.PageMain;
+import kz.jazzsoft.museum.helpers.MyWait;
+import kz.jazzsoft.museum.helpers.NaimenivaniePredmetaList;
+import kz.jazzsoft.museum.helpers.Nomer;
+import kz.jazzsoft.museum.helpers.WorkWithPropertyFile;
+import kz.jazzsoft.museum.pageObjects.PageEdit;
+import kz.jazzsoft.museum.pageObjects.PageKnigaPostupleniSozdanie;
+import kz.jazzsoft.museum.pageObjects.PageMain;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Properties;
 
