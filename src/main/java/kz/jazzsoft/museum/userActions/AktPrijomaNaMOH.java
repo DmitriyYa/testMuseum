@@ -1,11 +1,11 @@
 package kz.jazzsoft.museum.userActions;
 
-import kz.jazzsoft.museum.pageObjects.PageAktPrijomaNaMOH;
-import kz.jazzsoft.museum.pageObjects.PageMain;
 import kz.jazzsoft.museum.helpers.CreateDate;
 import kz.jazzsoft.museum.helpers.MyWait;
 import kz.jazzsoft.museum.helpers.Nomer;
 import kz.jazzsoft.museum.helpers.WorkWithPropertyFile;
+import kz.jazzsoft.museum.pageObjects.PageAktPrijomaNaMOH;
+import kz.jazzsoft.museum.pageObjects.PageMain;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 

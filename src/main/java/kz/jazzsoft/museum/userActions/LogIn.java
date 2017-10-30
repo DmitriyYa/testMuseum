@@ -1,7 +1,7 @@
 package kz.jazzsoft.museum.userActions;
 
-import kz.jazzsoft.museum.pageObjects.PageLogIn;
 import kz.jazzsoft.museum.helpers.WorkWithPropertyFile;
+import kz.jazzsoft.museum.pageObjects.PageLogIn;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
